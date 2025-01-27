@@ -3,7 +3,7 @@ const express = require("express");
 
 connectToMongo();
 const app = express();
-const PORT = 3000;
+const PORT = 6000;
 app.use(express.json());
 
 
@@ -15,5 +15,5 @@ app.use("/api/Auth", require("./routes/auth"))
 app.use("/api/Notes", require("./routes/notes"))
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server Backend is running on port ${PORT}`);
 })
