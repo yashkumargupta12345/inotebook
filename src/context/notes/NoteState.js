@@ -13,7 +13,7 @@ const NoteState = (props) => {
       method: "GET",
       headers: {
           "Content-Type": "application/json",
-          "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc5NTEwZDI5Yjc0MzM0YjEzNWExNmQ5In0sImlhdCI6MTczODA3Nzk3Mn0.OTum9he0fKBAtW4lNYSTSTLuQov8OB-lJZPiAJqVoFs"
+          "auth-token": "localStorage.getItem('token')"
       }});
     const json = await response.json();
     setNotes(json)
@@ -47,8 +47,7 @@ const NoteState = (props) => {
           "Content-Type": "application/json",
           "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc5NTEwZDI5Yjc0MzM0YjEzNWExNmQ5In0sImlhdCI6MTczNzg0MDM5OH0.w0OhFkfOpHuBVVy7aMvOs_NOppDJqoX_G0C0eBo16e8"
       }})
-          const resp =  response.json();
-          console.log(resp)
+          // const resp =  response.json();
 
   // logic to delete a note
     console.log("deleting the note with id: "+  id);
@@ -67,7 +66,7 @@ const NoteState = (props) => {
           "Content-Type": "application/json",
           "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc5NTEwZDI5Yjc0MzM0YjEzNWExNmQ5In0sImlhdCI6MTczNzg0MDM5OH0.w0OhFkfOpHuBVVy7aMvOs_NOppDJqoX_G0C0eBo16e8"
       }, body: JSON.stringify(title, description, tag)})
-          const resp =  await response.json();
+          // const resp =  await response.json();
 
     let newNotes = JSON.parse(JSON.stringify(notes))
     // logic to edit in Note
